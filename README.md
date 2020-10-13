@@ -27,14 +27,16 @@ OpenPHT-Embedded is a 'Just enough OS' Linux distribution for running [OpenPHT](
 
 
 
+
+Get your DtB from your original firwmware, if thats not possible you can download the dtb here:
+
+https://github.com/Spark-NV/DTB
+
+
 To find your required dtb reference here:
 
 https://coreelec.org/dtb/
 
-
-Download the dtb here:
-
-https://github.com/Spark-NV/DTB
 
 
 
@@ -43,6 +45,11 @@ https://github.com/Spark-NV/DTB
 **Source code**
 
 * https://github.com/LibreELEC/LibreELEC.tv
+
+
+
+
+
 
 **License**
 
