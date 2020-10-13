@@ -1,6 +1,8 @@
+#!/bin/sh
+
 ################################################################################
 #      This file is part of OpenELEC - http://www.openelec.tv
-#      Copyright (C) 2009-2016 Stephan Raue (stephan@openelec.tv)
+#      Copyright (C) 2009-2014 Stephan Raue (stephan@openelec.tv)
 #
 #  OpenELEC is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -16,33 +18,29 @@
 #  along with OpenELEC.  If not, see <http://www.gnu.org/licenses/>.
 ################################################################################
 
-PKG_NAME="wetekdvb"
-PKG_VERSION="20170608"
-PKG_ARCH="arm aarch64"
-PKG_LICENSE="nonfree"
-PKG_SITE="http://www.wetek.com/"
-PKG_URL="https://sources.libreelec.tv/devel/$PKG_NAME-$PKG_VERSION.tar.xz"
-PKG_DEPENDS_TARGET="toolchain linux"
-PKG_NEED_UNPACK="$LINUX_DEPENDS"
-PKG_SECTION="driver"
-PKG_SHORTDESC="wetekdvb: Wetek DVB driver"
-PKG_LONGDESC="These package contains Wetek's DVB driver "
+. /etc/profile
 
-PKG_IS_ADDON="no"
-PKG_AUTORECONF="no"
-
-make_target() {
-  : # nothing todo
+run_scripts()
+{
+    list_scripts $1
+    for script in $SCRIPTS ; do
+        progress "running sleep script $script ($1)..."
+        sh /usr/lib/systemd/system-sleep.serial/$script $1
+    done
 }
 
-makeinstall_target() {
-  mkdir -p $INSTALL/usr/lib/modules/$(get_module_dir)/$PKG_NAME
-  cp wetekdvb.ko $INSTALL/usr/lib/modules/$(get_module_dir)/$PKG_NAME
-
-  mkdir -p $INSTALL/usr/lib/firmware
-    cp firmware/* $INSTALL/usr/lib/firmware
+list_scripts()
+{
+    case $1 in
+        pre)
+            SCRIPTS=$(ls /usr/lib/systemd/system-sleep.serial/ | sort)
+        ;;
+        post)
+            SCRIPTS=$(ls /usr/lib/systemd/system-sleep.serial/ | sort -r)
+        ;;
+    esac
 }
 
-post_install() {
-  enable_service wetekdvb.service
-}
+run_scripts $1
+
+exit 0

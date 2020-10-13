@@ -1,6 +1,8 @@
+#!/bin/sh
+
 ################################################################################
 #      This file is part of OpenELEC - http://www.openelec.tv
-#      Copyright (C) 2009-2016 Stephan Raue (stephan@openelec.tv)
+#      Copyright (C) 2009-2014 Stephan Raue (stephan@openelec.tv)
 #
 #  OpenELEC is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -16,33 +18,13 @@
 #  along with OpenELEC.  If not, see <http://www.gnu.org/licenses/>.
 ################################################################################
 
-PKG_NAME="wetekdvb"
-PKG_VERSION="20170608"
-PKG_ARCH="arm aarch64"
-PKG_LICENSE="nonfree"
-PKG_SITE="http://www.wetek.com/"
-PKG_URL="https://sources.libreelec.tv/devel/$PKG_NAME-$PKG_VERSION.tar.xz"
-PKG_DEPENDS_TARGET="toolchain linux"
-PKG_NEED_UNPACK="$LINUX_DEPENDS"
-PKG_SECTION="driver"
-PKG_SHORTDESC="wetekdvb: Wetek DVB driver"
-PKG_LONGDESC="These package contains Wetek's DVB driver "
+. /etc/profile
 
-PKG_IS_ADDON="no"
-PKG_AUTORECONF="no"
+# see https://wiki.archlinux.org/index.php/Power_Management#Hooks_in_.2Fusr.2Flib.2Fsystemd.2Fsystem-sleep
 
-make_target() {
-  : # nothing todo
-}
+for script in $HOME/.plexht/addons/*/sleep.d/*.power; do
+  progress "running addon sleep script $script ($@)..."
+  sh $script $@
+done
 
-makeinstall_target() {
-  mkdir -p $INSTALL/usr/lib/modules/$(get_module_dir)/$PKG_NAME
-  cp wetekdvb.ko $INSTALL/usr/lib/modules/$(get_module_dir)/$PKG_NAME
-
-  mkdir -p $INSTALL/usr/lib/firmware
-    cp firmware/* $INSTALL/usr/lib/firmware
-}
-
-post_install() {
-  enable_service wetekdvb.service
-}
+exit 0
