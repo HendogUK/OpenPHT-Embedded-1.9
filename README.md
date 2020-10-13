@@ -1,14 +1,44 @@
+# OpenPHT-Embedded
+
+OpenPHT-Embedded is a 'Just enough OS' Linux distribution for running [OpenPHT](https://github.com/RasPlex/OpenPHT) on popular mediacentre hardware.
+
+**Notes**
+
+* SSH login details are user: "root" password: "openpht" or "rasplex" depending on distribution.
+
+**Build**
+
+* `DISTRO=OpenPHT PROJECT=S905 ARCH=aarch64 make image`
+* `DISTRO=OpenPHT PROJECT=Generic ARCH=x86_64 make image`
+* `DISTRO=RasPlex PROJECT=RPi2 ARCH=arm make image`
+* `DISTRO=RasPlex PROJECT=RPi ARCH=arm make image`
+* `DISTRO=OpenPHT PROJECT=WeTek_Core ARCH=arm make image`
+* `DISTRO=OpenPHT PROJECT=WeTek_Play ARCH=arm make image`
+* `DISTRO=OpenPHT PROJECT=WeTek_Play_2 ARCH=aarch64 make image`
+* `DISTRO=OpenPHT PROJECT=WeTek_Hub ARCH=aarch64 make image`
+* `DISTRO=OpenPHT PROJECT=Odroid_C2 ARCH=aarch64 make image`
+* `DISTRO=OpenPHT PROJECT=Intel_EGL ARCH=x86_64 make image`
+* Use `OPENPHT_REPO`, `OPENPHT_SETTINGS_REPO` and `OPENPHT_BRANCH` to change what repository and branch of OpenPHT(-settings) to build
+
+
+**In order to build aml builds you must place your device dtb in the directory "/tools/place-dtb-here/"**
+
+
+To find your required dtb reference here:
+
+https://coreelec.org/dtb/
+
+
+Download the dtb here:
+
+https://github.com/Spark-NV/DTB
+
+
 # LibreELEC
 
-LibreELEC is a 'Just enough OS' Linux distribution for running the award-winning [Kodi](http://kodi.tv) software on popular mediacentre hardware. LibreELEC is a conservative fork of the popular [OpenELEC](http://openelec.tv) project with a stronger focus on pre-release testing and post-release change management. Further information on the project can be found on the [LibreELEC website](https://libreelec.tv).
+**Source code**
 
-**Issues & Support**
-
-Please report issues via the [LibreELEC forum: Bug Reports](http://forum.libreelec.tv/forum-35.html). Please ask support questions in the [LibreELEC forum: Help & Support](http://forum.libreelec.tv/forum-3.html) or ask a member of project staff in the #libreelec IRC channel on Freenode.
-
-**Donations**
-
-Contributions towards current project funding goals can be sent via PayPal to donations@libreelec.tv
+* https://github.com/LibreELEC/LibreELEC.tv
 
 **License**
 
