@@ -9,6 +9,8 @@ OpenPHT-Embedded is a 'Just enough OS' Linux distribution for running [OpenPHT](
 
 # BUILD
 
+```
+
 * `DISTRO=OpenPHT PROJECT=S905 ARCH=arm make image`
 * `DISTRO=OpenPHT PROJECT=Generic ARCH=x86_64 make image`
 * `DISTRO=RasPlex PROJECT=RPi2 ARCH=arm make image`
@@ -20,7 +22,9 @@ OpenPHT-Embedded is a 'Just enough OS' Linux distribution for running [OpenPHT](
 * `DISTRO=OpenPHT PROJECT=Odroid_C2 ARCH=arm make image`
 * `DISTRO=OpenPHT PROJECT=Intel_EGL ARCH=x86_64 make image`
 
+
 * Use `OPENPHT_REPO`, `OPENPHT_SETTINGS_REPO` and `OPENPHT_BRANCH` to change what repository and branch of OpenPHT(-settings) to build
+```
 
 
 **For aml builds you must place your device dtb in the directory "/tools/place-dtb-here/"**
