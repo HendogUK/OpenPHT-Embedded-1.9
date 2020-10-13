@@ -17,7 +17,7 @@
 ################################################################################
 
 PKG_NAME="plexht"
-PKG_VERSION="1.8"
+PKG_VERSION="1.9"
 PKG_ARCH="any"
 PKG_LICENSE="GPL"
 PKG_SITE="http://www.openpht.tv"

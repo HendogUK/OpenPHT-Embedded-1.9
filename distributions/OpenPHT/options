@@ -30,7 +30,7 @@ if [ -z "$OPENPHT_BRANCH" ]; then
   OPENPHT_BRANCH="openpht-1.9"
 fi
 if [ -z "$OPENPHT_REPO" ]; then
-  OPENPHT_REPO="https://github.com/RasPlex/OpenPHT.git"
+  OPENPHT_REPO="https://github.com/Spark-NV/OpenPHT.git"
 fi
 if [ -z "$OPENPHT_SETTINGS_REPO" ]; then
   OPENPHT_SETTINGS_REPO="https://github.com/RasPlex/service.openelec.settings.git"
