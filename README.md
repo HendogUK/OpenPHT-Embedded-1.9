@@ -1,12 +1,13 @@
 # OpenPHT-Embedded
 
-OpenPHT-Embedded is a 'Just enough OS' Linux distribution for running [OpenPHT](https://github.com/RasPlex/OpenPHT) on popular mediacentre hardware.
+OpenPHT-Embedded is a 'Just enough OS' Linux distribution for running [OpenPHT](https://github.com/RasPlex/OpenPHT)
+
 
 **Notes**
 
 * SSH login details are user: "root" password: "openpht" or "rasplex" depending on distribution.
 
-**Build**
+# BUILD
 
 * `DISTRO=OpenPHT PROJECT=S905 ARCH=aarch64 make image`
 * `DISTRO=OpenPHT PROJECT=Generic ARCH=x86_64 make image`
@@ -18,10 +19,12 @@ OpenPHT-Embedded is a 'Just enough OS' Linux distribution for running [OpenPHT](
 * `DISTRO=OpenPHT PROJECT=WeTek_Hub ARCH=aarch64 make image`
 * `DISTRO=OpenPHT PROJECT=Odroid_C2 ARCH=aarch64 make image`
 * `DISTRO=OpenPHT PROJECT=Intel_EGL ARCH=x86_64 make image`
+
 * Use `OPENPHT_REPO`, `OPENPHT_SETTINGS_REPO` and `OPENPHT_BRANCH` to change what repository and branch of OpenPHT(-settings) to build
 
 
-**In order to build aml builds you must place your device dtb in the directory "/tools/place-dtb-here/"**
+**For aml builds you must place your device dtb in the directory "/tools/place-dtb-here/"**
+
 
 
 To find your required dtb reference here:
@@ -32,6 +35,7 @@ https://coreelec.org/dtb/
 Download the dtb here:
 
 https://github.com/Spark-NV/DTB
+
 
 
 # LibreELEC
