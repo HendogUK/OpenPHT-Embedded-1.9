@@ -27,7 +27,7 @@ Use `OPENPHT_REPO`, `OPENPHT_SETTINGS_REPO` and `OPENPHT_BRANCH` to change what 
 ```
 
 
-**For aml builds you must place your device dtb in the directory "/tools/place-dtb-here/"**
+**For aml builds you must place your device dtb in the directory "tools/place-dtb-here/"**
 
 
 
