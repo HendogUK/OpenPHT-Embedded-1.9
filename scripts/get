@@ -23,7 +23,7 @@
 _get_file_already_downloaded() {
   if [ -f $PACKAGE ]; then
     if [ "$(cat $STAMP_URL 2>/dev/null)" == "${PKG_URL}" ]; then
-      [ -z "${PKG_SHA256}" -o "$(cat $STAMP_SHA 2>/dev/null)" == "${PKG_SHA256}" ] && return 0
+      [ -z "${PKG_SHA256}" -o "$(cat "${PKG_SHA256}" 2>/dev/null)" == "${PKG_SHA256}" ] && return 0
     fi
   fi
   return 1
