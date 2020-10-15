@@ -17,7 +17,7 @@
 ################################################################################
 
 PKG_NAME="OpenPHT-settings"
-PKG_VERSION="1.8"
+PKG_VERSION="1.9"
 PKG_ARCH="any"
 PKG_LICENSE="prop."
 PKG_SITE="http://www.rasplex.com"
