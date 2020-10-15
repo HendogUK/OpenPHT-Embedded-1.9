@@ -3,8 +3,19 @@
 /.fakeroot.*
 
 # automatically downloaded source files
-/sources/
 /.stamps/
+
+# source files that are too big
+/sources/linux/*
+/sources/boost/*
+/sources/gcc-linaro-aarch64-linux-gnu/*
+/sources/gcc/*
+/sources/kernel-firmware/*
+/sources/linux/
+/sources/boost/
+/sources/gcc-linaro-aarch64-linux-gnu/
+/sources/gcc/
+/sources/kernel-firmware/
 
 # prebuild target binarys to provide
 /target/
@@ -23,7 +34,6 @@ mkpkg-temp
 /.work/
 
 # symlinks...
-/sources
 /.work
 
 # ccache
