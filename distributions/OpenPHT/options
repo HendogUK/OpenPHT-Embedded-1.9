@@ -33,7 +33,7 @@ if [ -z "$OPENPHT_REPO" ]; then
   OPENPHT_REPO="https://github.com/Spark-NV/OpenPHT.git"
 fi
 if [ -z "$OPENPHT_SETTINGS_REPO" ]; then
-  OPENPHT_SETTINGS_REPO="https://github.com/RasPlex/service.openelec.settings.git"
+  OPENPHT_SETTINGS_REPO="https://github.com/Spark-NV/service.settings.git
 fi
 
 # Skins to install (Estuary)
