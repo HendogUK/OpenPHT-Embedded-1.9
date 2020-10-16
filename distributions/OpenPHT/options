@@ -12,7 +12,7 @@
 
 # Welcome Message for e.g. SSH Server (up to 5 Lines)
   GREETING0="##############################################"
-  GREETING1="#              OpenPHT-Embedded              #"
+  GREETING1="#               Dreamstream HD               #"
   GREETING2="#              http://openpht.tv             #"
   GREETING3="##############################################"
   GREETING4=""
@@ -30,7 +30,7 @@ if [ -z "$OPENPHT_BRANCH" ]; then
   OPENPHT_BRANCH="openpht-1.9"
 fi
 if [ -z "$OPENPHT_REPO" ]; then
-  OPENPHT_REPO="https://github.com/Spark-NV/OpenPHT.git"
+  OPENPHT_REPO="https://github.com/HendogUK/OpenPHT.git"
 fi
 if [ -z "$OPENPHT_SETTINGS_REPO" ]; then
   OPENPHT_SETTINGS_REPO="https://github.com/Spark-NV/service.settings.git
